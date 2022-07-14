@@ -1,4 +1,4 @@
-import platform, socket, os, subprocess
+import platform,  os
 from requests import get
 from pathlib import Path
 
@@ -15,6 +15,7 @@ os.system(f"curl ipinfo.io/{ip}/city -o city.txt")
 os.system(f"curl ipinfo.io/{ip}/country -o country.txt")
 os.system(f"curl ipinfo.io/{ip}/region -o region.txt")
 
+# Puts Data into Variables.
 
 Internet_Citylocation = Path('country.txt').read_text()
 Internet_Countrylocation = Path('city.txt').read_text()
